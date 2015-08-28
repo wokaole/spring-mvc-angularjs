@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="AngularSpringApp">
+<head>
+    <meta charset="utf-8">
+    <title>Service App</title>
+    <link rel="stylesheet" href="static/css/app.css"/>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<div id="wrapper">
+
+    <ul class="menu">
+        <li><a href="#/cars">Cars</a></li>
+        <li><a href="#/trains">Trains</a></li>
+        <li><a href="#/railwaystations">Railway Station</a></li>
+    </ul>
+    <hr class=""/>
+    <div ng-view></div>
+
+</div>
+
+<script src="static/js/lib/angular.js"></script>
+<script src="static/js/lib/angular-route.js"></script>
+<script src="static/js/app.js"></script>
+<script src="static/js/controllers/car.js"></script>
+<script src="static/js/controllers/train.js"></script>
+<script src="static/js/controllers/railwaystation.js"></script>
+</body>
+</html>
