@@ -20,4 +20,12 @@ public class CarService {
     public void addCar(String carName) {
         carList.add(carName);
     }
+
+    public void removeCar(String carName) {
+        carList.remove(carName);
+    }
+
+    public void removeAllCar() {
+        carList.clear();
+    }
 }

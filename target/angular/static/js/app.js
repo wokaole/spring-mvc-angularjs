@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('AngularSpringApp', ['ngRoute', 'carController', 'trainController', 'railwayStationController']);
+var app = angular.module('AngularSpringApp', ['ngRoute', 'carController', 'trainController', 'railwayStationController', 'app.services', 'app.directives']);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
         when('/cars', {

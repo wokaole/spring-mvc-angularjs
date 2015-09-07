@@ -3,10 +3,7 @@ package org.cold.angular.controller;
 import org.cold.angular.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +27,18 @@ public class CarController {
     @ResponseBody
     public void addCar(@RequestParam String carName) {
         carService.addCar(carName);
+    }
+
+    @RequestMapping(value = "/car/{carName}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public void removeCar(@PathVariable String carName) {
+        carService.removeCar(carName);
+    }
+
+    @RequestMapping(value = "/removeAll", method = RequestMethod.DELETE)
+    @ResponseBody
+    public void removeAll() {
+        carService.removeAllCar();
     }
 
     @RequestMapping("/layout")
